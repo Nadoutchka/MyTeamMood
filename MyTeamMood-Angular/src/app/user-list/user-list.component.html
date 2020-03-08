@@ -1,0 +1,8 @@
+<div class="user_list">
+   <div *ngFor="let user of users" class="card" [routerLink]="['/users', user.id]">
+      <img class="user_avatar" [src]="'../assets/avatars/avatar_' + user.id + '.png'" />
+      <p class="user_name">
+        {{ user.firstname }} {{ user.lastname }}
+      </p>
+    </div>
+</div>

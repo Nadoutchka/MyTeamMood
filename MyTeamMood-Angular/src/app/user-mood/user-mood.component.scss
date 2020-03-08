@@ -1,0 +1,31 @@
+.moods {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    //background-color: green;
+}
+
+.smiley {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.smiley_img {
+    border-radius: 50%;
+    max-width: 70%;
+    //background-color: yellow;
+}
+
+#perso {
+    margin-left: 5%;
+}
+
+.welcome {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    margin: 50px;
+
+}
