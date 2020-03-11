@@ -1,0 +1,39 @@
+<p class="titre">Liste des collaborateurs</p>
+
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Last name</th>
+          <th>First name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td> {{ user.lastname }}</td>
+          <td> {{ user.firstname }}</td>
+          <td> {{ user.email }}</td>
+          <td class="edit"><a (click)="onSelect(user)"><img class="icon_edit" src="../assets/icons/edit.png"></a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="card" *ngIf="selectedUser">
+        <h3>Modifier les informations de : {{selectedUser.firstname | uppercase}}</h3>
+        <div id="id"><span>ID: </span>{{selectedUser.id}}</div>
+        <div>
+            <label class="champ">Nom :
+            <input [(ngModel)]="selectedUser.lastname" placeholder="lastname"/>
+            </label>
+            <label class="champ">Prénom :
+            <input [(ngModel)]="selectedUser.firstname" placeholder="firstname"/>
+            </label>
+            <label class="champ">Email :
+            <input [(ngModel)]="selectedUser.email" placeholder="email"/>
+            </label>
+        </div>      
+      </div>
+  </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { USERS } from '../users';
+import { UserService } from '../user.service';
 import { User } from '../user';
 
 @Component({
@@ -11,9 +11,11 @@ import { User } from '../user';
 })
 export class UserMoodComponent implements OnInit {
   user : User;
+  users: User[];
 
   constructor(
     private route: ActivatedRoute,
+    private userService: UserService
   ) { }
 
   ngOnInit(): void {
@@ -22,12 +24,6 @@ export class UserMoodComponent implements OnInit {
 
   getUser(): void {
     const userId = +this.route.snapshot.paramMap.get('userId');
-    for(let user of USERS)
-    {
-      if (user.id == userId)
-      {
-        this.user = user;
-      }
-    }
+    this.userService.getUser(userId).subscribe(user => this.user = user);
   }
 }

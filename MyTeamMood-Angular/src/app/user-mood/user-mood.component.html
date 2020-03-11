@@ -1,12 +1,12 @@
-<p class="welcome" *ngIf="user" id="welcome">
+<p class="titre" *ngIf="user">
     Bonjour {{user.firstname}} !<br /> Quelle est ton humeur aujourd'hui ?
 </p>
 
 <div class="moods">
-    <a class="smiley"><img class="smiley_img" src="../assets/smileys/veryHappySmiley.png" /></a>
-    <a class="smiley"><img class="smiley_img" src="../assets/smileys/happySmiley.png" /></a>
-    <a class="smiley"><img class="smiley_img" src="../assets/smileys/regularSmiley.png" /></a>
-    <a class="smiley"><img class="smiley_img" src="../assets/smileys/sadSmiley.png" /></a>
+    <a class="smiley"><img class="smiley_img" src="../assets/smileys/veryHappySmiley.png" [routerLink]="['/']"/></a>
+    <a class="smiley"><img class="smiley_img" src="../assets/smileys/happySmiley.png" [routerLink]="['/']"/></a>
+    <a class="smiley"><img class="smiley_img" src="../assets/smileys/regularSmiley.png" [routerLink]="['/']"/></a>
+    <a class="smiley"><img class="smiley_img" src="../assets/smileys/sadSmiley.png" [routerLink]="['/']"/></a>
 </div>
 
 <label id="perso" for="perso"><input type="checkbox" name="perso"> Raisons personnelles</label>

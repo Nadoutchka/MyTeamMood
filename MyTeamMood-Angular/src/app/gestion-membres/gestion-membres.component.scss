@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    margin: 50px;
+    border-width: 5px;
+    border-color: rgb(255, 0, 0);
+}
+
+thead {
+    border-radius: 100%;
+}
+
+th {
+    background-color: rgb(255, 0, 0);
+    color: #FFFFFF;
+}
+
+.icon_edit {
+    width: 18px;
+}
+
+.edit {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin: 50px;
+    width: 70%;
+}
+
+#id {
+    margin-bottom: 10px;
+}
+
+.champ {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
